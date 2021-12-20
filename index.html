@@ -7,16 +7,16 @@
   <link rel="stylesheet" href="takeoutcalcStyle.css">
   <script>
     function calc(){
-    var payoff = document.getElementById("payoff").value;
-    var trackTake = document.getElementById("trackTake").value/100;
-    var userTake = document.getElementById("userTake").value/100;
+    var payoff = +document.getElementById("payoff").value;
+    var trackTake = +document.getElementById("trackTake").value/100;
+    var userTake = +document.getElementById("userTake").value/100;
 
     var pool = 1;
     var payout = pool -(pool*trackTake);
     var newPayout = pool -(pool*userTake);
     var numTickets = payout/payoff;
     var newPayoff = newPayout/numTickets;
-    var difference = (newPayoff-payoff)/payoff;
+    var difference =  Math.abs((newPayoff - payoff) / ((newPayoff+payoff)/2 ));
 
     document.getElementsByTagName("p")[0].innerHTML = "At " + userTake*100 + "% takeout your payoff would of been $" + newPayoff.toFixed(2) + " that is a " + 100*difference.toFixed(4) + "% difference.";
   }
