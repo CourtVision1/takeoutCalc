@@ -50,3 +50,11 @@ button:hover{
 a {
   color: blue;
 }
+
+a:visited {
+	color: blue;
+}
+
+a:hover{
+	color: purple;
+}
