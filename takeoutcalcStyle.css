@@ -35,3 +35,18 @@ button{
 button:hover{
 	background-color:#4095c6;
 }
+
+#footer {
+	bottom: 0;
+	cursor: default;
+	height: 6em;
+	left: 0;
+	line-height: 8em;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+}
+
+a {
+  color: blue;
+}
